@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff7f0;
+    color: #5a2a27;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  .form-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #a05249;
+    margin-bottom: 20px;
+  }
+  
+  .pedido-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .pedido-table th,
+  .pedido-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .pedido-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .pedido-table td {
+    background-color: #fff;
+  }
+  
+  button, .btn-edit, .btn-done, .btn-delete {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-edit {
+    background-color: #f7b4a1;
+    color: white;
+  }
+  
+  .btn-edit:hover {
+    background-color: #e89c89;
+  }
+  
+  .btn-done {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .btn-done:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-delete {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c0392b;
+  }
+  
+  .pedido-table td a,
+  .pedido-table td form button {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .pedido-table td form {
+    margin: 0;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .pedido-table {
+      font-size: 14px;
+    }
+  
+    .pedido-table th,
+    .pedido-table td {
+      padding: 8px;
+    }
+  
+    .pedido-table td form {
+      display: block;
+      margin-bottom: 5px;
+    }
+  
+    .pedido-table td form button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pedido-table {
+      font-size: 12px;
+    }
+  
+    .pedido-table th,
+    .pedido-table td {
+      padding: 6px;
+    }
+  
+    .pedido-table {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  
+    .pedido-table th,
+    .pedido-table td {
+      white-space: nowrap;
+    }
+  
+    .pedido-table td form {
+      display: block;
+    }
+  
+    .pedido-table td form button {
+      margin: 5px 0;
+    }
+  }
+  

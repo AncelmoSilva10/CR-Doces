@@ -1,5 +1,10 @@
-body {
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
     margin: 0;
+    padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #fff7f0;
     color: #5a2a27;
@@ -7,25 +12,25 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
   }
   
   img.logo {
     width: 200px;
-    max-width: 80%;
+    max-width: 90vw;
     animation: float 3s ease-in-out infinite;
   }
   
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 20px 0;
     color: #a05249;
   }
   
   button {
-    padding: 15px 40px;
-    font-size: 1.2rem;
+    padding: 15px 30px;
+    font-size: 1rem;
     background-color: #f7b4a1;
     color: white;
     border: none;
@@ -46,6 +51,19 @@ body {
     }
     50% {
       transform: translateY(-8px);
+    }
+  }
+  
+  /* 📱 Responsivo */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    button {
+      width: 100%;
+      padding: 15px 0;
+      font-size: 1.1rem;
     }
   }
   
