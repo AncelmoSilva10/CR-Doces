@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ['php82', 'php82Packages.composer', 'mysql', 'nodejs_18', 'openssl']
+nixPkgs = ['php81', 'php81Packages.composer', 'mysql', 'nodejs_18', 'openssl']
 
 [phases.build]
 cmds = [
