@@ -66,15 +66,17 @@ class PedidoController extends Controller
     }
 
     // Marca um pedido como feito (delete lógico)
-    public function feito($id)
+    public function marcarComoFeito($id)
     {
         $pedido = Pedido::findOrFail($id);
-        $pedido->feito = true;
+        $pedido->feito = true; // ou como você marca o "feito"
         $pedido->save();
-
-        return redirect()->route('pedido.index');
+    
+        return redirect()->route('pedido.index')->with('success', 'Pedido marcado como feito!');
     }
-
+    
+    
+    
     // Exclui o pedido do banco
     public function destroy($id)
     {

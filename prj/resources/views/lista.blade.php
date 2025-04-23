@@ -2,6 +2,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Lista de Pedidos</title>
   <link rel="stylesheet" href="./css/lista-style.css">
 </head>
@@ -33,10 +35,11 @@
               <a href="{{ route('pedido.edit', $pedido->id) }}" class="btn-edit">✏️ Alterar</a>
             </td>
             <td>
-              <form action="{{ route('pedido.index', $pedido->id) }}" method="POST" style="display:inline;">
-                @csrf
-                <button type="submit" class="btn-done">✅ Feito</button>
-              </form>
+            <form action="{{ route('pedido.feito', $pedido->id) }}" method="POST" style="display:inline;">
+            @csrf
+            <button type="submit" class="btn-done">✅ Feito</button>
+        </form>
+
             </td>
             <td>
               <form action="{{ route('pedido.destroy', $pedido->id) }}" method="POST" style="display:inline;">

@@ -29,3 +29,6 @@ Route::get('/lista', [PedidoController::class, 'index'])->name('pedido.index');
 Route::get('/pedido/{id}/edit', [PedidoController::class, 'edit'])->name('pedido.edit');
 Route::put('/pedido/{id}', [PedidoController::class, 'update'])->name('pedido.update');
 Route::delete('/pedido/{id}', [PedidoController::class, 'destroy'])->name('pedido.destroy');
+
+Route::post('/pedido/{id}/feito', [PedidoController::class, 'marcarComoFeito'])->name('pedido.feito');
+
